@@ -1,1 +1,4 @@
 rails new taxi-xpress -d mysql
+sudo service mysql start
+
+
