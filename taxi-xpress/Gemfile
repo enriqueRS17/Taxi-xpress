@@ -48,11 +48,11 @@ end
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'#Authentication support
-#gem 'devise'
-#gem 'devise-bootstrap-views'
+gem 'devise'
+gem 'devise-bootstrap-views'
 
 #Simplified from management
-#gem 'simple_form'
+gem 'simple_form'
 
 #Admin section support
-#gem 'rails_admin'
+gem 'rails_admin'
