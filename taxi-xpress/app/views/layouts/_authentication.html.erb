@@ -1,12 +1,13 @@
 <p class="navbar-text navbar-right">
 
   <% if current_user %>
-
-      Signed in as <%= link_to current_user.friendly_name, edit_profile_path(current_user.default_profile), class: "navbar-link" %>
+ 
+      Signed in as <%= link_to current_user.friendly_name, edit_profile_path(current_user.profile), class: "navbar-link" %>
+      <%= image_tag current_user.profile.avatar.url(:thumb), class: "img-circle" %>
 
       <%= " | " %>
 
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "navbar-link" %>
+      <%= link_to "Finalizar sesión", destroy_user_session_path, method: :delete, class: "navbar-link" %>
 
   <% else %>
 
