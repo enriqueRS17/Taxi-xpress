@@ -56,3 +56,5 @@ gem 'simple_form'
 
 #Admin section support
 gem 'rails_admin'
+#Imagen
+gem "paperclip", "~> 4.2"

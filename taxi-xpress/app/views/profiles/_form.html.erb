@@ -5,7 +5,7 @@
   <div class="form-inputs">
     <%= f.input :first_name %>
     <%= f.input :last_name %>
-    <%= f.input :born_at, as: :date %>
+    <%= f.input :born_at, as: :date, start_year: Date.today.year - 90 %>
   </div>
 
   <div class="form-actions">
