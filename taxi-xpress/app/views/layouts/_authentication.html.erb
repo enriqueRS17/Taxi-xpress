@@ -7,11 +7,11 @@
 
       <%= " | " %>
 
-      <%= link_to "Finalizar sesión", destroy_user_session_path, method: :delete, class: "navbar-link" %>
+      <%= link_to "Finalizar sesión:", destroy_user_session_path, method: :delete, class: "navbar-link" %>
 
   <% else %>
 
-      <%= link_to "Inicio de sesion", new_user_session_path, class: "navbar-link" %>
+      <%= link_to "Inicio de sesion:", new_user_session_path, class: "navbar-link" %>
 
   <% end %>
 
