@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Taxi Xpress" %></title>
-    
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/-D-NMFxKl02I/Vlyvgo4COrI/AAAAAAAAA8M/-vPLNwNPoW8/w346-h370/favico.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/-D-NMFxKl02I/Vlyvgo4COrI/AAAAAAAAA8M/-vPLNwNPoW8/w346-h370/favico.png" sizes="32x32" />
+
 
     <%= csrf_meta_tags %>
  <style>
@@ -110,7 +112,11 @@
     </div>
   </div>
 </nav>
-
+  <div class="container text-center">
+  <h3>TAXI XPRESS</h3>
+  <p><em>Nos encanta servirte, estes donde estés!</em></p>
+  <p>24 HORAS AL DIA A TU SERVICIO !</p>
+</div>
 
    <div class="container">
       <div class="row">
@@ -119,6 +125,7 @@
           <%= yield %>
         </div>
     
+  
         
         <div class="col-lg-3">
           
@@ -131,10 +138,10 @@
                          <!-- <li class="nav-header">Sideasbar</li> -->
               <li><%= link_to "Nosotros", pages_nosotros_path  %></li>
               <li><%= link_to "Tarifas", pages_tarifas_path  %></li>
-              <li><%= link_to "Servicios", pages_servicio_path  %></li>
+             <!-- Indicators <li><%= link_to "Servicios", pages_servicio_path  %></li>-->
                <li><%= link_to "TOS", pages_tos_path  %></li>
                 <li><%= link_to "Libro de Reclamos", pages_reclamos_path  %></li>
-                <li><%= link_to "Encuéntranos", pages_contactanos_path  %></li>
+                <li><%= link_to "Contáctanos", pages_contactanos_path  %></li>
 
             </ul>
           </div><!--/.well -->
