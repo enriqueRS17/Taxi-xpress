@@ -1,127 +1,28 @@
-<h1>TaxiXpress</h1>
-
-<!DOCTYPE html>
-<html id="complaints">
-	<head>
-		<meta charset="UTF-8">
-		
-	</head>
-	<body>
-			<section>
-			<header>
-				<h1>
-					<a href="/" title="TaxiXpress">
-					
-					</a>
-				</h1>
-			</header>
-			<div role="banner">
-							<p>Conforme a lo establecido en el código de la Protección y Defensa 
-					del consumidor contamos con un Libro de Reclamaciones a tu disposición. 
-					Ingresa una queja o reclamo aquí.</p>			
-						</div>
-			<div id="personal-info">
-				<form name="info" method="post">			 									
-					<fieldset>
-						<div>
-							<label for="date">Fecha de reclamo o queja</label>
-							<input id="date" name="date" type="date" value="" required placeholder="Fecha de reclamo o queja">
-						</div>							
-						<div>
-							<label for="fullname">Nombres y Apellidos</label>
-							<input id="fullname" name="fullname" value="" required placeholder="Nombres y Apellidos">
-						</div>
-						<div>
-							<label for="address">Dirección</label>						
-							<input id="address" name="address" value="" required placeholder="Dirección">
-						</div>
-						<div>
-							<label for="district">Distrito</label>						
-							<input id="district" name="district" value="" required placeholder="Distrito">
-						</div>						
-						<div>
-							<label for="id_document">Doc. de Identidad</label>						
-							<select id="id_document" name="id_document" required>
-								<option value="D.N.I.">D.N.I.</option>
-								<option value="C.E.">C.E.</option>
-								<option value="Menor de Edad">Menor de Edad</option>
-							</select>
-							<p class="submitted"></p>
-						</div>
-						<div>
-							<label for="id_number">N° doc. Identidad</label>						
-							<input id="id_number" name="id_number" value="" required placeholder="N° doc. Identidad">
-						</div>
-						<div>
-							<label for="email">Correo Electrónico</label>						
-							<input id="email" name="email" type="email" value="" required placeholder="Correo Electrónico">
-						</div>
-						<div>
-							<label for="phone">Teléfono Alternativo</label>						
-							<input id="phone" name="phone" type="tel" value="" required placeholder="Teléfono Alternativo">
-						</div>
-						<div class="page-break">
-							<label for="parent">Padre o Madre</label>						
-							<input id="parent" name="parent" value="" required placeholder="Padre o Madre">
-						</div>
-						<div>
-							<label for="about">Identificación del bien contratado</label>						
-							<select id="about" name="about" required>
-								<option value="Producto">Producto</option>
-								<option value="Servicio">Servicio</option>
-							</select>
-							<p class="submitted"></p>
-						</div>
-						<div>
-							<label for="type">Detalle de la reclamación</label>
-							<dl>
-								<dt>RECLAMO:</dt>
-								<dd>Disconformidad relacionada a un producto o servicio brindado.</dd>
-								<dt>QUEJA:</dt>
-								<dd>Desacuerdo no relacionado a los productos o servicios brindados.<br>
-								Malestar o insatisfacción con el Servicio al Cliente.</dd>
-							</dl>				
-							<select id="type" name="type" required>
-								<option value="Reclamo">Reclamo</option>
-								<option value="Queja">Queja</option>
-							</select>
-							<p class="submitted"></p>							
-						</div>
-						<div>
-							<label for="description">Descripción</label>						
-							<textarea id="description" name="description" required rows="6"></textarea>
-						</div>
-						<div>
-							<label for="actions">Acciones Adoptadas por el Vendedor</label>						
-							<textarea id="actions" name="actions" required rows="6"></textarea>
-						</div>
-						<div>
-							<label for="details">Detalle</label>						
-							<textarea id="details" name="details" required rows="6"></textarea>
-						</div>
-						<input type="hidden" name="trick" value="">
-						<input type="hidden" name="check" value="1">
-										
-						<button ontouchstart="" id="sign-up" class="sign-up-btn" type="submit">Enviar</button>
-										</fieldset>
-				</form>		
-			</div>
-		</section>
-		<script>
-			try {
-				var submitted = document
-								.querySelector("html.submitted")
-								.querySelectorAll("input, textarea, select");
-
-				Array.prototype.slice.call(submitted, 0)
-					.forEach(function (item) { 
-						item.setAttribute("disabled", "disabled"); 
-					});
-			} catch (_22) {
-				// nuttin'
-			}
-		</script>
-		<script>
-
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', '
+<div class="container">
+  <h1 class="text-center">TAXI XPRESS</h1>
+  <p class="text-center"><em>LIBRO DE RECLAMOS</em></p>
+  <div class="row test">
+    <div class="col-md-4">
+      <p>NOS CONTACTAREMOS PRONTO CONTIGO</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span>Chorrillos, Lima</p>
+      <p><span class="glyphicon glyphicon-phone"></span>Teléfono: +01 254-5454</p>
+      <p><span class="glyphicon glyphicon-envelope"></span>Email: librodereclamos@taxixpress.com</p> 
+    </div>
+    <div class="col-md-4">
+      <div class="row">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Nombres" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comentarios" rows="5"></textarea>
+      <div class="row">
+        <div class="col-md-12 form-group">
+          <button class="btn pull-right" type="submit">Send</button>
+        </div>
+      </div> 
+    </div>
+  </div>
+</div>

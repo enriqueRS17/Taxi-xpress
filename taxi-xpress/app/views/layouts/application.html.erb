@@ -5,12 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= content_for?(:title) ? yield(:title) : "Taxi Xpress" %></title>
+     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/-D-NMFxKl02I/Vlyvgo4COrI/AAAAAAAAA8M/-vPLNwNPoW8/w346-h370/favico.png" sizes="16x16" />
     <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/-D-NMFxKl02I/Vlyvgo4COrI/AAAAAAAAA8M/-vPLNwNPoW8/w346-h370/favico.png" sizes="32x32" />
-
-
+ 
+ 
     <%= csrf_meta_tags %>
+ 
  <style>
+ .person {
+      border: 10px solid transparent;
+      margin-bottom: 25px;
+      width: 80%;
+      height: 80%;
+      opacity: 0.7;
+  }
+  .person:hover {
+      border-color: #f1f1f1;
+  }
+ .navbar {
+    margin-bottom: 0;
+    background-color: black;
+    border: 0;
+    font-size: 11px ;
+    letter-spacing: 4px;
+    opacity:0.9;
+}
+
+
+.navbar-nav li.active a {
+    color: #29292c ;
+    background-color:#29292c !important;
+ 
   .jumbotron {
       background-color: #2f2b2a;
       color: #008000;
@@ -64,7 +92,9 @@
       margin: 25px 0;
     }
     
+    
   }
+ 
   </style>
     <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
@@ -97,26 +127,42 @@
   </head>
   <body>
 
- <nav class="navbar navbar-inverse">
+ <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
-    <%= render 'layouts/authentication' %>
+        <%= render 'layouts/authentication' %>
     <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span> 
+      </button>
       <a class="navbar-brand" href="/">TAXI XPRESS</a>
     </div>
-    <div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><%= link_to "NOSOTROS", pages_nosotros_path  %></li>
+        <li><%= link_to "TARIFAS", pages_tarifas_path  %></li>
+             <!-- Indicators <li><%= link_to "Servicios", pages_servicio_path  %></li>-->
+               <li><%= link_to "TOS", pages_tos_path  %></li>
+                <li><%= link_to "LIBRO DE RECLAMOS", pages_reclamos_path  %></li>
+                <li><%= link_to "CONTACTANOS", pages_contactanos_path  %></li>
+        
+        
+          </ul>
+        </li>
+    
+      </ul>
+    </div>
+  </div>
+</nav>
+          
+      
       <ul class="nav navbar-nav">
         
          
       </ul>
       
-    </div>
-  </div>
-</nav>
-  <div class="container text-center">
-  <h3>TAXI XPRESS</h3>
-  <p><em>Nos encanta servirte, estes donde estés!</em></p>
-  <p>24 HORAS AL DIA A TU SERVICIO !</p>
-</div>
+ 
 
    <div class="container">
       <div class="row">
@@ -124,32 +170,23 @@
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
+    </div>
+  </div>
+</nav>
+
     
   
-        
-        <div class="col-lg-3">
-          
-    <div  style= "color: blue; background-color:#989499"class="well sidebar-nav navbar-left">
-      
-            
-    
-            <ul class="nav nav-pills nav-stacked ">
-              
-                         <!-- <li class="nav-header">Sideasbar</li> -->
-              <li><%= link_to "Nosotros", pages_nosotros_path  %></li>
-              <li><%= link_to "Tarifas", pages_tarifas_path  %></li>
-             <!-- Indicators <li><%= link_to "Servicios", pages_servicio_path  %></li>-->
-               <li><%= link_to "TOS", pages_tos_path  %></li>
-                <li><%= link_to "Libro de Reclamos", pages_reclamos_path  %></li>
-                <li><%= link_to "Contáctanos", pages_contactanos_path  %></li>
-
-            </ul>
           </div><!--/.well -->
 
         
         </div><!--/span-->
       </div><!--/row-->
-  
+      
+     <div class="container text-center">
+  <h3>TAXI XPRESS</h3>
+  <p><em>Nos encanta servirte, estes donde estés!</em></p>
+  <p>24 HORAS AL DIA A TU SERVICIO !</p>
+</div>
 
     <h2>Opiniones de nuestros usuarios....</h2>
  
