@@ -145,6 +145,26 @@
           <%= bootstrap_flash %>
           <%= yield %>
         </div>
+        
+          <div class="col-lg-3">
+          
+    <div  style= "color: blue; background-color:#989499"class="well sidebar-nav navbar-left">
+      
+            
+    
+            <ul class="nav nav-pills nav-stacked ">
+              
+                          <li class="nav-header">SIDESBAR</li> 
+              <li><%= link_to "Nosotros", pages_nosotros_path  %></li>
+              <li><%= link_to "Tarifas", pages_tarifas_path  %></li>
+              <li><%= link_to "Servicios", pages_servicio_path  %></li>
+               <li><%= link_to "TOS", pages_tos_path  %></li>
+                <li><%= link_to "Libro de Reclamos", pages_reclamos_path  %></li>
+                <li><%= link_to "Encuéntranos", pages_contactanos_path  %></li>
+            </ul>
+        
+        
+        
     </div>
   </div>
 </nav>
@@ -200,16 +220,16 @@
     
      <style>
 .carousel-control.right, .carousel-control.left {
-    background-image: none;
+    background-image: gray;
     color: #FFFFFF;
 }
 
 .carousel-indicators li {
-    border-color: #000000;
+    border-color: #808080;
 }
 
 .carousel-indicators li.active {
-    background-color: #000000;
+    background-color: #808080;
 }
 
 .item h4 {
