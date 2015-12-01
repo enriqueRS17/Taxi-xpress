@@ -1,1 +1,86 @@
-<h1>SERVICIO</h1>
+ <style>
+.panel {
+    border: 1px solid #989499; 
+    border-radius:0;
+    transition: box-shadow 0.5s;
+}
+
+.panel:hover {
+    box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+}
+
+
+.panel-heading {
+    color: #fff !important;
+    background-color: #989499 !important;
+    padding: 25px;
+    border-bottom: 1px solid transparent;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.panel-footer {
+    background-color: #fff !important;
+}
+
+.panel-footer h3 {
+    font-size: 32px;
+}
+
+.panel-footer h4 {
+    color: #aaa;
+    font-size: 14px;
+}
+
+.panel-footer .btn {
+    margin: 15px 0;
+    background-color: #989499;
+    color: #ffffff;
+}
+</style>
+<h1>NUESTROS SERVICIOS</h1>
+<div class="col">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag "Corporativo.jpg", html: { alt: "rest_slider1" } %>
+      <div class="caption">
+        <h3>Corporativos</h3>
+        <p>Estás de vacaciones?, De visita de negocios?, 
+            Necesitas movilizarte por toda la ciudad de Lima 
+            y no tienes auto?. Utiliza nuestro servicio de Taxi 
+            por Horas en el cual te podrás trasladar cómodo 
+            y seguro por la ciudad de Lima a tarifas económicas.</p>
+        <button class="btn btn-lg">Deseo Reservar</button>
+      </div>
+     </div>
+    </div>
+</div>
+<div class="col">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag "porhora.jpg", html: { alt: "rest_slider1" } %>
+      <div class="caption">
+        <h3>Taxi por Horas</h3>
+        <p>Estás de vacaciones?, De visita de negocios?, Necesitas movilizarte 
+            por toda la ciudad de Lima y no tienes auto?. Utiliza nuestro 
+            servicio de Taxi por Horas en el cual te podrás trasladar cómodo 
+            y seguro por la ciudad de Lima a tarifas económicas.</p>
+            <button class="btn btn-lg">Deseo Reservar</button>
+      </div>
+    </div>
+    </div>
+</div>
+<div class="col">
+  <div class="col-sm-6 col-md-4">
+    <div class="thumbnail">
+      <%= image_tag "reservas.jpg", html: { alt: "rest_slider1" } %>
+      <div class="caption">
+        <h3>Taxi Particular-Reservas</h3>
+        <p>Un taxi seguro y confiable. Pide tu taxi llamando a nuestra central al 01-254-5454.</p>
+        <button class="btn btn-lg">Deseo Reservar</button>
+      </div>
+    </div>
+  </div>
+</div>
