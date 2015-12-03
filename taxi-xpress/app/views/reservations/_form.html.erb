@@ -1,7 +1,7 @@
 <%= simple_form_for @reservation, :html => { :class => 'form-horizontal' } do |f| %>
   <%= f.input :reserved_at %>
   <%= error_span(@reservation[:reserved_at]) %>
-  <%= f.input :car_type, collection: 1..10, default: 1 %>
+  <%= f.input :car_type, :collection =>  [:sedan, :station, :minivan], :checked => [:sedan], :include_hidden => false  %>
   <%= error_span(@reservation[:seats]) %>
   <%= f.label :status %>
   <%= f.object.status.titleize %>

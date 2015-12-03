@@ -4,6 +4,7 @@ class Reservation < ActiveRecord::Base
     after_initialize :set_default_status
 
   enum status: [:requested, :confirmed, :waiting, :rejected, :dismissed, :cancelled]
+  enum car_type: [:sedan, :station, :minivan]
 
   def set_default_status
     self.status ||= :requested
