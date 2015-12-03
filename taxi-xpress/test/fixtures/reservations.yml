@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  reserved_at: 2015-12-03 01:24:16
+  car_type: 1
+  status: 1
+  user_id: 
+
+two:
+  reserved_at: 2015-12-03 01:24:16
+  car_type: 1
+  status: 1
+  user_id: 

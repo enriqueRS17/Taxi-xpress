@@ -1,0 +1,14 @@
+<%= simple_form_for @reservation, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :reserved_at %>
+  <%= error_span(@reservation[:reserved_at]) %>
+  <%= f.input :car_type, collection: 1..10, default: 1 %>
+  <%= error_span(@reservation[:seats]) %>
+  <%= f.label :status %>
+  <%= f.object.status.titleize %>
+  <%= error_span(@reservation[:status]) %>
+  <%= error_span(@reservation[:user_id]) %>
+  
+  <%= f.button :submit, :class => 'btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                reservations_path, :class => 'btn btn-default' %>
+<% end %>
