@@ -1,21 +1,20 @@
 Rails.application.routes.draw do
+  resources :reservations, only: [:new, :create, :destroy]
+  get 'reservations/:id/cancel', controller: :reservations, action: :cancel, as: :cancel_reservation
+  get 'menu/index'
+  get 'menu/category/:id', controller: :menu, action: :category, as: :menu_category
+  
   resources :profiles, only: [:edit, :update]
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   #get 'pages/home'
-root "pages#home"
+  root "pages#home"
   get 'pages/nosotros'
-
   get 'pages/tarifas'
-
   get 'pages/servicio'
-
   get 'pages/promociones'
-
   get 'pages/contactanos'
-
   get 'pages/reclamos'
-
   get 'pages/tos'
 
   # The priority is based upon order of creation: first created -> highest priority.
