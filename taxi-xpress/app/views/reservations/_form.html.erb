@@ -7,6 +7,10 @@
   <%= f.object.status.titleize %>
   <%= error_span(@reservation[:status]) %>
   <%= error_span(@reservation[:user_id]) %>
+  <%= f.input :origin %>
+  <%= error_span(@reservation[:origin]) %>
+  <%= f.input :destination %>
+  <%= error_span(@reservation[:destination]) %>
   
   <%= f.button :submit, :class => 'btn-primary' %>
   <%= link_to t('.cancel', :default => t("helpers.links.cancel")),

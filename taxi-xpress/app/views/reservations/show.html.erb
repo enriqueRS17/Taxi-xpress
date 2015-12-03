@@ -8,10 +8,14 @@
   <dd><%= @reservation.reserved_at %></dd>
   <dt><strong><%= model_class.human_attribute_name(:car_type) %>:</strong></dt>
   <dd><%= @reservation.car_type %></dd>
-  <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
+ <dt><strong><%= model_class.human_attribute_name(:status) %>:</strong></dt>
   <dd><%= @reservation.status %></dd>
   <dt><strong><%= model_class.human_attribute_name(:user_id) %>:</strong></dt>
   <dd><%= @reservation.user_id %></dd>
+    <dt><strong><%= model_class.human_attribute_name(:origin) %>:</strong></dt>
+  <dd><%= @reservation.origin %></dd>
+  <dt><strong><%= model_class.human_attribute_name(:destination) %>:</strong></dt>
+  <dd><%= @reservation.destination %></dd>
 </dl>
 
 <%= link_to t('.back', :default => t("helpers.links.back")),

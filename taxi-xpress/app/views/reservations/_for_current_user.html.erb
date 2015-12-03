@@ -9,6 +9,8 @@
       <th><%= model_class.human_attribute_name(:reserved_at) %></th>
       <th><%= model_class.human_attribute_name(:car_type) %></th>
       <th><%= model_class.human_attribute_name(:status) %></th>
+      <th><%= model_class.human_attribute_name(:origin) %></th>
+      <th><%= model_class.human_attribute_name(:destination) %></th>
       <th><%= model_class.human_attribute_name(:created_at) %></th>
       <th><%=t '.actions', :default => t("helpers.actions") %></th>
     </tr>
@@ -20,6 +22,8 @@
         <td><%= reservation.reserved_at %></td>
         <td><%= reservation.car_type %></td>
         <td><%= reservation.status %></td>
+        <td><%= reservation.origin %></td>
+        <td><%= reservation.destination %></td>
         <td><%=l reservation.created_at %></td>
         <td>
           <%= link_to t('.destroy', :default => 'Cancel'),
