@@ -58,3 +58,5 @@ gem 'simple_form'
 gem 'rails_admin'
 #Imagen
 gem "paperclip", "~> 4.2"
+# Enumeration Support in Forms
+gem 'enum_help'
